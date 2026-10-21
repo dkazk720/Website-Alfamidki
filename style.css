@@ -1,0 +1,257 @@
+:root {
+    --warna-oranye-utama: #ff7043;   
+    --warna-oranye-tua: #e65100;     
+    --warna-oranye-muda: #fff3e0;    
+    --warna-kartu: #ffffff;          
+    --warna-teks: #2c3e50;          
+    --warna-harga: #2e7d32;         
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: var(--warna-oranye-muda);
+    color: var(--warna-teks);
+    line-height: 1.6;
+}
+
+.navigasi {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--warna-oranye-utama);
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    max-width: 850px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.teks-nav {
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+    padding: 20px;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    padding: 10px;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.menu a:hover {
+    transform: scale(1.07);
+}
+
+header {
+    padding: 40px;
+}
+
+#Beranda {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--warna-kartu);
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(255, 112, 67, 0.15);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.teks-header {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+.teks-header h1 {
+    font-size: 40px;
+    color: var(--warna-oranye-tua);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.teks-header p {
+    font-size: 20px;
+    color: #555;
+}
+
+.gambar1 {
+    width: 380px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+article {
+    padding: 40px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+article h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: var(--warna-oranye-tua);
+}
+
+article ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 25px;
+}
+
+article li {
+    background-color: var(--warna-kartu);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #ffe0b2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+article li:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(230, 81, 0, 0.2);
+}
+
+article li img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background-color: var(--warna-oranye-muda);
+}
+
+article li h3 {
+    font-size: 20px;
+    color: var(--warna-oranye-tua);
+    margin-bottom: 8px;
+}
+
+article li p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+article li p:last-child {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--warna-harga);
+    margin-bottom: 0;
+}
+
+footer {
+    background-color: grey;
+    color: white;
+    text-align: center;
+    width: 700px;
+    height: auto;
+    border-radius: 20px;
+    padding: 20px;
+   margin: 0 auto;
+}
+
+footer h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.Button {
+    display: inline-block;
+    background-color: var(--warna-oranye-utama);
+    color: white;
+    text-decoration: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 112, 67, 0.4);
+}
+
+.Button:hover {
+    background-color: var(--warna-oranye-tua);
+    transform: scale(1.05);
+}
+
+footer p {
+    margin-top: 30px;
+    font-size: 13px;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .navigasi {
+        flex-direction: column;
+        gap: 8px;
+        height: auto;       
+        padding: 10px 15px;
+    }
+
+    .teks-nav {
+        padding: 0;               
+        font-size: 22px;        
+    }
+    #Beranda {
+        flex-direction: column-reverse; 
+        text-align: center;
+    }
+    .teks-header {
+        text-align: center;
+        padding: -40px;
+    }
+
+    .teks-header h1 {
+        font-size: 40px;
+    }
+
+    .gambar1 {
+        width: 100%;
+        height: auto;
+    }
+
+    article ul {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;                 
+        justify-content: center;               
+        gap: 15px;                             
+        padding: 0;
+    }
+
+    article li {
+        width: 100%;                           
+        box-sizing: border-box;
+    }
+
+    footer {
+        width: 90%;                
+        margin: 30px auto;
+        padding: 20px 15px;
+    }
+}
